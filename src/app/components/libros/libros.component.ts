@@ -10,6 +10,7 @@ export class LibrosComponent {
   libros: string[] = [];
   boton: string = "Añadir libro"
   addToArray(){
+    if (this.tituloLibro!="")
     this.libros.push(this.tituloLibro)
   }
 }

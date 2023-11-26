@@ -11,6 +11,7 @@ export class SociosComponent {
   boton: string = "Añadir socio"
 
   addToArray(){
+    if (this.codigo!="")
     this.codigos.push(this.codigo)
   }
 
