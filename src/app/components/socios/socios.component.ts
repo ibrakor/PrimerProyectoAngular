@@ -6,20 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./socios.component.css']
 })
 export class SociosComponent {
+  codigos : string[]=[];
+  codigo : string =''
+  boton: string = "Añadir socio"
+
+  addToArray(){
+    this.codigos.push(this.codigo)
+  }
 
 }
-let socios = new Array()
 
-addEventListener("DOMContentLoaded", function () {
 
-  // @ts-ignore
-  document.getElementById("addCod").addEventListener("click", function () {
-    // @ts-ignore
-    let valor = document.getElementById("codigo").value
-    // @ts-ignore
-    document.getElementById("resultCod").textContent= valor
-    socios.push(valor)
-
-  })
-
-})

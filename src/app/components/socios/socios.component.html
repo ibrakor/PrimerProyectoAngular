@@ -6,10 +6,13 @@
 </head>
 <body>
 <p>Socios</p>
-Ingrese código <input type="text" name="codigo" id="codigo">
+Ingrese código <input type="text" name="codigo" id="codigo" [(ngModel)]="codigo">
 <br>
-Código: <a id="resultCod"></a>
-<br>
-<button id="addCod">Añadir</button>
+<p id="resultCod">Código: {{codigo}}</p>
+<h4>Socios</h4>
+<ul *ngFor="let cod of codigos">
+  <li>{{cod}}</li>
+</ul>
+<app-boton [label]="boton" (click)="addToArray()"></app-boton>
 </body>
 </html>
